@@ -110,26 +110,26 @@ async function SendEmailsToCompanies() {
 
 function sendEmail(mail, template, attachmentPath, callback) {
     const subject = "Enthusiastic Inquiry for Software Development Opportunity";
-
+    const email = process.env.EMAIL
     var transporter = nodemailer.createTransport({
         service: "gmail",
         auth: {
-            user: "yrsaikrishna@gmail.com",
-            pass: "ztdbrlhvuwxocjik",
+            user: email,
+            pass: process.env.PASSWORD,
         },
     });
 
     var attachment = fs.readFileSync(attachmentPath);
 
     var mailOptions = {
-        from: 'yrsaikrishna@gmail.com',
+        from: email,
         to: mail,
-        replyTo: 'yrsaikrishna@gmail.com',
+        replyTo: email,
         subject: subject,
         html: template,
         attachments: [
             {
-                filename: 'yrsk_mit_resume_9.pdf',
+                filename: process.env.PDF,
                 content: attachment
             }
         ]

@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
-const port = 8030;
+const dotenv = require('dotenv')
+dotenv.config()
+const port = process.env.PORT;
 const {extractEmailsFromFile, SendEmailsToCompanies} = require("./Utility/DataUtility")
 
 const response = extractEmailsFromFile();
