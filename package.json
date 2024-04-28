@@ -1,0 +1,26 @@
+{
+  "name": "autojobmailsending",
+  "version": "1.0.0",
+  "description": "This project is to automatically send email to the companies to seek the job opportunities",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rupaksaikrishnayerramsetti/AutoJobMailSending.git"
+  },
+  "author": "Yerramsetti R Sai Krishna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rupaksaikrishnayerramsetti/AutoJobMailSending/issues"
+  },
+  "homepage": "https://github.com/rupaksaikrishnayerramsetti/AutoJobMailSending#readme",
+  "dependencies": {
+    "express": "^4.19.1",
+    "nodemailer": "^6.9.13",
+    "nodemon": "^3.1.0",
+    "pdfreader": "^3.0.2"
+  }
+}
